@@ -39,11 +39,6 @@ class CommandsForFindObstacle(object):
         self._get_path(goal=self.goal)
         self.goals.remove(self.goal)
         self.start = self.goal
-        # self.goals.remove(self.goal)
-        print("goals " + str(self.goals) + "goal " + str(self.goal))
-        # for goal in self.goals:
-        #     if goal == self.goal:
-        #         self.goals.remove(self.goal)
 
     def _get_start_and_goals(self):
         for y, row in enumerate(self.grid):
