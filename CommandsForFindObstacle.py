@@ -17,31 +17,32 @@ class CommandsForFindObstacle(object):
         self.visited = {}
         self.path = []
         self.direction = []
-
         self._get_start_and_goals()
         self._completion_graph()
 
     def find_path(self):
-        self._find_short_path()
-
-    def _find_short_path(self):
-        len_to_path = {}
-        for i, el in enumerate(self.goals):
-            self._bfs(goal=el)
-            self._get_path(goal=el)
-            len_to_path.update({el: len(self.path)})
-        length_path = len_to_path.get(self.goals[0])
-        for point in len_to_path.items():
-            if length_path > point[1]:
-                length_path = point[1]
-                self.goal = point[0]
-        self._bfs(goal=self.goal)
-        self._get_path(goal=self.goal)
-        self.start = self.goal
-        # self.goals.remove(self.goal)
-        for goal in self.goals:
-            if goal == self.goal:
-                self.goals.remove(self.goal)
+        # self._find_short_path()
+        self._bfs(self.goals[1])
+        self._get_path(self.goals[1])
+        self._get_path(self.goals[0])
+    # def _find_short_path(self):
+    #     len_to_path = {}
+    #     for i, el in enumerate(self.goals):
+    #         self._bfs(goal=el)
+    #         self._get_path(goal=el)
+    #         len_to_path.update({el: len(self.path)})
+    #     length_path = len_to_path.get(self.goals[0])
+    #     for point in len_to_path.items():
+    #         if length_path > point[1]:
+    #             length_path = point[1]
+    #             self.goal = point[0]
+    #     self._bfs(goal=self.goal)
+    #     self._get_path(goal=self.goal)
+    #     self.start = self.goal
+    #     # self.goals.remove(self.goal)
+    #     for goal in self.goals:
+    #         if goal == self.goal:
+    #             self.goals.remove(self.goal)
 
     def _get_start_and_goals(self):
         for y, row in enumerate(self.grid):
@@ -83,20 +84,19 @@ class CommandsForFindObstacle(object):
 
     def _get_path(self, goal):
         path_head = goal
-        self.path = []
         while path_head in self.visited:
             self.path.append(path_head)
             path_head = self.visited[path_head]
         self.path.reverse()
 
-    def print_path(self):
-        self.grid_by_print = json.loads(json.dumps(self.grid, separators=(',', ':')))
-        for point in self.path:
-            self.grid_by_print[point[1]][point[0]] = 9
-            if point == self.goal:
-                self.grid_by_print[point[1]][point[0]] = 2
-            if point == self.start:
-                self.grid_by_print[point[1]][point[0]] = 3
+    # def print_path(self):
+    #     self.grid_by_print = json.loads(json.dumps(self.grid, separators=(',', ':')))
+    #     for point in self.path:
+    #         self.grid_by_print[point[1]][point[0]] = 9
+    #         if point == self.goal:
+    #             self.grid_by_print[point[1]][point[0]] = 2
+    #         if point == self.start:
+    #             self.grid_by_print[point[1]][point[0]] = 3
 
         for y, row in enumerate(self.grid_by_print):
             row_str = ""
