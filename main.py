@@ -4,7 +4,7 @@ import numpy as np
 grid = np.load('./result.npy')
 
 # grid = [
-#     [0, 1, 0, 1, 3, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+#     [0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
 #     [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
 #     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
 #     [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -18,14 +18,14 @@ grid = np.load('./result.npy')
 
 commands = CommandsForFindObstacle.CommandsForFindObstacle(grid)
 commands.find_path()
-# commands.print_path()
+commands.file_write_path()
 print(commands.path)
+print(commands.prepare_path())
 
 commands.find_path()
 # commands.print_path()
 print(commands.path)
 
 commands.find_path()
-# commands.print_path()
-print(commands.path)
+# print(commands.path)
 # commands.print_path()

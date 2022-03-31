@@ -1,6 +1,8 @@
 import json
 from collections import deque
 
+import numpy
+
 
 class CommandsForFindObstacle(object):
     def __init__(self, grid):
@@ -11,13 +13,13 @@ class CommandsForFindObstacle(object):
         self.cols = len(grid[0])
         self.rows = len(grid)
         self.start = (0, 0)
-        self.goal = (0, 0)
+        self.goal = (10, 5)
         self.queue = deque([self.start])
         self.visited = {}
         self.path = []
         self.direction = []
 
-        self._get_start()
+        # self._get_start()
         self._completion_graph()
 
     def find_path(self):
@@ -76,32 +78,41 @@ class CommandsForFindObstacle(object):
             path_head = self.visited[path_head]
         self.path.reverse()
 
-    # def print_path(self):
-    #     self.grid_by_print = json.loads(json.dumps(self.grid, separators=(',', ':')))
-    #     for point in self.path:
-    #         self.grid_by_print[point[1]][point[0]] = 9
-    #         if point == self.goal:
-    #             self.grid_by_print[point[1]][point[0]] = 2
-    #         if point == self.start:
-    #             self.grid_by_print[point[1]][point[0]] = 3
-    #
-    #     for y, row in enumerate(self.grid_by_print):
-    #         row_str = ""
-    #         for x, col in enumerate(row):
-    #             row_str += str(col) + "   "
-    #         print(row_str)
+    def print_path(self):
+        self.grid_by_print = json.loads(json.dumps(self.grid, separators=(',', ':')))
+        for point in self.path:
+            self.grid_by_print[point[1]][point[0]] = 9
+            if point == self.goal:
+                self.grid_by_print[point[1]][point[0]] = 2
+            if point == self.start:
+                self.grid_by_print[point[1]][point[0]] = 3
 
-    # def file_write_path(self, goal):
-    #     f = open('path.txt', 'w')
-    #     for point in self.path:
-    #         self.grid[point[1]][point[0]] = 9
-    #         if point == goal:
-    #             self.grid[point[1]][point[0]] = "2"
-    #         if point == self.start:
-    #             self.grid[point[1]][point[0]] = "3"
-    #
-    #     for y, row in enumerate(self.grid):
-    #         row_str = ""
-    #         for x, col in enumerate(row):
-    #             row_str += str(col) + "   "
-    #         f.write(row_str + '\n')
+        for y, row in enumerate(self.grid_by_print):
+            row_str = ""
+            for x, col in enumerate(row):
+                row_str += str(col) + "   "
+            print(row_str)
+
+    def file_write_path(self):
+        f = open('path.txt', 'w')
+        self.grid_by_print = numpy.copy(self.grid)
+
+        for point in self.path:
+            self.grid_by_print[point[1]][point[0]] = 9
+            if point == self.goal:
+                self.grid_by_print[point[1]][point[0]] = 2
+            if point == self.start:
+                self.grid_by_print[point[1]][point[0]] = 3
+
+        for y, row in enumerate(self.grid_by_print):
+            row_str = ""
+            for x, col in enumerate(row):
+                row_str += str(col) + "   "
+            f.write(row_str + '\n')
+
+    def prepare_path(self):
+        angle = []
+        for i in range(len(self.path) - 2):
+            if (self.path[i][0] != self.path[i + 2][0]) and (self.path[i][1] != self.path[i + 2][1]):
+                angle.append(self.path[i + 1])
+        return angle
