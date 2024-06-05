@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-05T11:12:00.852Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="Sy7kdCDs5OWM2M5WRFMJ" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-05T12:58:37.680Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="LBk_GV2PERtpjQsBsS9o" version="24.4.13" type="github">
   <diagram name="Страница — 1" id="ErJwVojsrPIL3w7OGmRs">
-    <mxGraphModel dx="3912" dy="2636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3724" dy="2514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -98,21 +98,8 @@
             <mxRectangle width="310" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="--rrv6k8ZZjKxxdi5PQi-303" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" parent="--rrv6k8ZZjKxxdi5PQi-281" vertex="1">
-          <mxGeometry y="60" width="520" height="39" as="geometry" />
-        </mxCell>
-        <mxCell id="--rrv6k8ZZjKxxdi5PQi-304" value="naturalKey" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-303" vertex="1">
-          <mxGeometry width="210" height="39" as="geometry">
-            <mxRectangle width="210" height="39" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="--rrv6k8ZZjKxxdi5PQi-305" value="String" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-303" vertex="1">
-          <mxGeometry x="210" width="310" height="39" as="geometry">
-            <mxRectangle width="310" height="39" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="--rrv6k8ZZjKxxdi5PQi-607" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" parent="--rrv6k8ZZjKxxdi5PQi-281" vertex="1">
-          <mxGeometry y="99" width="520" height="39" as="geometry" />
+          <mxGeometry y="60" width="520" height="39" as="geometry" />
         </mxCell>
         <mxCell id="--rrv6k8ZZjKxxdi5PQi-608" value="storyId" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-607" vertex="1">
           <mxGeometry width="210" height="39" as="geometry">
@@ -120,6 +107,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="--rrv6k8ZZjKxxdi5PQi-609" value="String" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-607" vertex="1">
+          <mxGeometry x="210" width="310" height="39" as="geometry">
+            <mxRectangle width="310" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="--rrv6k8ZZjKxxdi5PQi-303" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" parent="--rrv6k8ZZjKxxdi5PQi-281" vertex="1">
+          <mxGeometry y="99" width="520" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="--rrv6k8ZZjKxxdi5PQi-304" value="naturalKey" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-303" vertex="1">
+          <mxGeometry width="210" height="39" as="geometry">
+            <mxRectangle width="210" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="--rrv6k8ZZjKxxdi5PQi-305" value="String" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" parent="--rrv6k8ZZjKxxdi5PQi-303" vertex="1">
           <mxGeometry x="210" width="310" height="39" as="geometry">
             <mxRectangle width="310" height="39" as="alternateBounds" />
           </mxGeometry>
@@ -809,11 +809,17 @@
         <mxCell id="--rrv6k8ZZjKxxdi5PQi-632" value="Это должно быть фото с первого слайда стори, надо подумать, как лучше сделать" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-612.5" y="1584" width="180" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="f5RGY0vnuHBgZh4xOxQB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f5RGY0vnuHBgZh4xOxQB-1" target="--rrv6k8ZZjKxxdi5PQi-573">
+        <mxCell id="f5RGY0vnuHBgZh4xOxQB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="f5RGY0vnuHBgZh4xOxQB-1" target="--rrv6k8ZZjKxxdi5PQi-573" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f5RGY0vnuHBgZh4xOxQB-1" value="Какие типы мы тут хотим видеть?&lt;br&gt;&lt;br&gt;Flag, region, country?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="f5RGY0vnuHBgZh4xOxQB-1" value="Какие типы мы тут хотим видеть?&lt;br&gt;&lt;br&gt;Flag, region, country?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="980" y="920" width="239" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pK3Zk050kyHLFPFt07Zh-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pK3Zk050kyHLFPFt07Zh-1" target="--rrv6k8ZZjKxxdi5PQi-607">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pK3Zk050kyHLFPFt07Zh-1" value="Навигация на фронте по этому полю, задается беком" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="1174.5" width="166" height="95.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
